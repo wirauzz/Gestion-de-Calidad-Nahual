@@ -1,0 +1,48 @@
+.tituloRegistrar{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #808080;
+}
+
+.contenedor{
+    max-width: 1000px;
+    background-color: white;
+    color: black;
+    margin:0 auto 30px auto;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem; 
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;  
+    box-shadow: 10px 10px 50px #9E9E9E;
+}
+.centrarColumnas{
+    margin:0 0 0 0px;
+    align-items: center;
+    justify-content: center;
+}
+.etiquetas{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    color: #656565;
+    margin: 0px 11%;
+}
+
+.ui.modal .actions>.ui.primary.button {
+    background-color: white;
+    color: #2ecc40;
+    border: 1px solid #2ecc40;
+}
+
+ .ui.modal .actions>.button {
+    background-color: white;
+    color:#db2828;
+    border: 1px solid #db2828;
+} 

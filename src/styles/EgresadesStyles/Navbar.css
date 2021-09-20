@@ -1,0 +1,23 @@
+.menu{
+    background-color: #87D734;
+    height: 80;
+}
+
+.logo{
+    margin: 10px;
+    height: 60px;
+}
+
+.nav-titulo{
+    color: white;
+    margin: 10px;
+    position: absolute;
+    top: 20px;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.authNav{
+    float:right;
+    margin: 20px 30px 0 0;
+}

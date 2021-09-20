@@ -1,0 +1,81 @@
+.tituloRegistrar {
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 28px;
+  text-align: center;
+  color: #808080;
+  margin-top: 50px !important;
+}
+
+.ui {
+  margin-top: 5px !important;
+}
+
+.titulo {
+  margin-top: 20px;
+  text-align: center;
+  color: hsl(0, 0%, 50%);
+}
+
+h1 {
+  font-weight: 300 !important;
+  font-size: 28px !important;
+  line-height: 28px !important;
+  text-align: center !important;
+}
+
+.linea {
+  border-bottom: 1px solid #BDBDBD;
+  color: #808080;
+  max-width: 1000px;
+  margin: 10px auto 50px auto;
+}
+
+.contenedor {
+  max-width: 1000px;
+  background-color: white;
+  color: black;
+  margin: 10px auto 50px auto;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  box-shadow: 10px 10px 50px #9E9E9E;
+  margin-top: 50px;
+  padding: 15px;
+}
+
+.centrarColumnas {
+  margin: 0 0 0 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.etiquetas{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  color: #656565;
+  margin: 0px 11%;
+}
+
+.ui.modal .actions>.ui.primary.button {
+  background-color: rgb(129, 206, 50);
+  color: white;
+}
+
+.ui.modal .actions>.button {
+  background-color: hsl(0, 0%, 50%);
+  color: white;
+}
+
+.descripcion{
+  background-color: none;
+  color: black;
+  font-size: 16px;
+  text-align: center;
+}

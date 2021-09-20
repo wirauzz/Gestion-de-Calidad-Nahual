@@ -1,0 +1,69 @@
+.yearinput {
+    width: 200px;
+}
+
+.loading {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elementsloading {
+    display: flex;
+    flex-direction: column;
+}
+
+.loadingdots {
+    display: flex;
+    justify-content: center;
+}
+
+.vistaCursos{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.sede{
+    background-color: #E6E6F2 ;
+    border-radius: 40px ;
+    padding: 5px 10px ;
+}
+
+.botonBasurero{
+    padding: 2px 2px !important;
+    background-color: transparent !important;
+}
+
+.basurero{
+    display: contents !important;
+}
+
+.editar{
+    display: contents !important;
+    color: #2ecc40;
+}
+
+.ui.modal .actions>.ui.primary.button {
+    background-color: white;
+    color: #2ecc40;
+    border: 1px solid #2ecc40;
+}
+
+ .ui.modal .actions>.button {
+    background-color: white;
+    color:#db2828;
+    border: 1px solid #db2828;
+} 
+
+.crearNodoButton {
+    text-align-last: end;
+}
+
+.notificationMessage {
+    z-index: 10000;
+    display: none;
+    position: fixed;
+    padding-left: 40%;
+    padding-top: 0.5%;
+}

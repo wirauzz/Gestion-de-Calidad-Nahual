@@ -1,0 +1,110 @@
+.displayFlex {
+    display: flex;
+  }
+  
+  .centered {
+    justify-content: center;
+  }
+  
+  .spacedBetween {
+    justify-content: space-between;
+  }
+  
+  .columnGap {
+    column-gap: 1em;
+  }
+  
+  .linkElement {
+    padding: 1em;
+    border-radius: 4px;
+    background-color:#17c671;
+    color:white
+  }
+  
+  .opcionesPeriodo {
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .selectBar {
+    width: 15em;
+  }
+  
+  .fullWidth {
+    width: 100%;
+  }
+  
+  .year-picker {
+    height: 3em;
+    width: 100% !important;
+  }
+  
+  .jTime {
+    width: 100% !important;
+  }
+  
+  .editarPeriodo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .actionsCrearPeriodo{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .dosentradasformulario {
+    width: 50%;  
+  }
+  
+  .columnGap {
+    column-gap: 1em;
+  }
+  
+  .jTime {
+    width: 100% !important;
+  }
+  
+  .forceFlex {
+    display: flex !important;
+  }
+  
+  .rowGap {
+    row-gap: 1em;
+  }
+  
+  .isColumn {
+    flex-direction: column;
+  }
+  
+  .ui.modal .actions>.ui.primary.button {
+      background-color: white;
+      color: #2ecc40;
+      border: 1px solid #2ecc40;
+  }
+  
+   .ui.modal .actions>.button {
+      background-color: white;
+      color:#db2828;
+      border: 1px solid #db2828;
+  } 
+  
+  .confirmButton {
+    background-color: white !important;
+    color:#2ecc40 !important;
+    border: 1px solid #2ecc40 !important;
+  } 
+  
+  .cancelButton {
+    background-color: white !important;
+    color:#db2828 !important;
+    border: 1px solid #db2828 !important;
+  }
+
+  .button-perfil{
+    border-color: #87968f!important;
+  }
