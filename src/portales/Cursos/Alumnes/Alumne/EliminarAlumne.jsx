@@ -66,7 +66,7 @@ export default function Eliminar({ alumneId, curseId, actualizarAlumnes }) {
                     <Button
                         color='red'
                         size= 'small'
-                        onClick={() => abrirModal(true)}
+                        onClick={() => abrirModal()}
                     >
                         Eliminar
                         <Icon name='trash' style={{ margin: '0 0 0 10px' }} />
