@@ -58,7 +58,7 @@ export default function Eliminar({ alumneId, curseId, actualizarAlumnes }) {
             <Modal
                 basic
                 onClose={() => setAbierto(false)}
-                onOpen={() => abrirModal(true)}
+                onOpen={() => abrirModal()}
                 open={abierto}
                 style={{ marginTop: '-200px' }}
                 size='mini'
