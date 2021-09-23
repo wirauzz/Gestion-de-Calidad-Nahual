@@ -103,7 +103,7 @@ export default function EliminarCurso({ idCurso, cursos, setCursos }) {
                         <Button
                             color='green'
                             inverted
-                            onClick={() => { eliminar(false) }}>
+                            onClick={() => { eliminar() }}>
                             <Icon name='checkmark' />
                             Confirmar
                         </Button>
