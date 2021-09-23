@@ -179,13 +179,12 @@ class ListaDeAlumnesPorCurso extends Component {
       })
     }
     else {
-      this.state.alumnesSeleccionados.map(() => {
         return this.setState({
           alumnesSeleccionados: this.state.alumnesSeleccionados.filter(
             (a) => a.estudiante.id !== alumne.estudiante.id
           )
         });
-      })
+      
     }
   }
 
