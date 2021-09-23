@@ -76,7 +76,7 @@ export default function BotonReinscribir({idEgresade}) {
           return x.result;
         })
         .then((x) => {
-          mostrarNotificacion(x);
+          mostrarNotificacion();
         });
        
     }
