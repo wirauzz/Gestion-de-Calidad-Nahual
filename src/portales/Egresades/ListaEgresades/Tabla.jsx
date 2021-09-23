@@ -54,8 +54,7 @@ class Nahual_Table extends Component {
           filasEncontradas: dat.response,
           cargando: false,
           cantItems: dat.response.length,
-          cantPages: Math.round((dat.response.length/10)+0.5),
-          cargando: false        
+          cantPages: Math.round((dat.response.length/10)+0.5)       
         },()=>{this.buscador({target:{value:''}})});
       })
   }
