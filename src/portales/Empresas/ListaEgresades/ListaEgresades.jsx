@@ -196,13 +196,12 @@ class ListaEgresades extends Component {
           egresade
         )
       });
+      
     } else {
-      this.state.egresadesSeleccionados.map(() => {
-        return this.setState({
-          egresadesSeleccionados: this.state.egresadesSeleccionados.filter(
-            (e) => e.id !== egresade.id
-          )
-        });
+      return this.setState({
+        egresadesSeleccionados: this.state.egresadesSeleccionados.filter(
+          (e) => e.id !== egresade.id
+        )
       });
     }
   };
