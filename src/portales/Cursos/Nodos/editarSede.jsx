@@ -44,9 +44,6 @@ export class EditarSede extends Component {
         }
     }
 
-    componentDidMount() {
-    }
-
     render() {
         return (
             <>
