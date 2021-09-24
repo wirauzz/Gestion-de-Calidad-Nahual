@@ -58,7 +58,6 @@ export default function SolicitarAcceso({
                     value={nombre}
                     validators={['required']}
                     errorMessages={['Este campo es requerido']}
-                    onChange={(x,data) => {}}
                     />
                     Motivo
                     <TextArea
