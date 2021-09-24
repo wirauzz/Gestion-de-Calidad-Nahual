@@ -87,6 +87,7 @@ export default function BotonReinscribir({idEgresade}) {
     }
 
     return (
+      
         <Modal
           open={open}
           onClose={() => abrirModal(false)}
@@ -94,7 +95,7 @@ export default function BotonReinscribir({idEgresade}) {
           size="small"
           closeIcon
           trigger={
-            <Button color='brown' onClick={() => (getEgresade(idEgresade), getCursos() )}>
+            <Button color='brown' onClick={() => (getEgresade(idEgresade))}>
               <label className="icon-text" >Reinscribir</label>
               <i className="add user icon" style={{ margin: '0 0 0 5px' }}></i>
             </Button>}

@@ -42,15 +42,14 @@ export default function EliminarCurso({ idCurso, cursos, setCursos }) {
     }
 
     function eliminar() {
-        alumnes.forEach(alumne => {
-            eliminarInscripto(alumne.id)
-                .then((x) => {
-                    return x.data;
-                })
-                .then(() => {
-                    EliminarEstudiante(alumne.estudiante.id)
-                });
-        })
+
+        eliminarInscripto(alumnes.id)
+            .then((x) => {
+                return x.data;
+            })
+            .then(() => {
+                EliminarEstudiante(alumnes.estudiante.id)
+            });
         eliminarCurso(idCurso)
             .then((x) => {
                 setAbierto(false);
