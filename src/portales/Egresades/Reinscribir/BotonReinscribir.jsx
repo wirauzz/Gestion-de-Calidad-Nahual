@@ -87,6 +87,7 @@ export default function BotonReinscribir({idEgresade}) {
     }
 
     return (
+      
         <Modal
           open={open}
           onClose={() => abrirModal(false)}
