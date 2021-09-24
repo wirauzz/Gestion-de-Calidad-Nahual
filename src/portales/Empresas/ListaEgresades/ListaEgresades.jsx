@@ -196,6 +196,7 @@ class ListaEgresades extends Component {
           egresade
         )
       });
+      
     } else {
       return this.setState({
         egresadesSeleccionados: this.state.egresadesSeleccionados.filter(
