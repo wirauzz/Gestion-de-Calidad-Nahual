@@ -207,7 +207,7 @@ class ListaEgresades extends Component {
   };
   cambiarEstadoDeCheckbox(filtro) {
     let checkboxes = Array.from(document.getElementsByName("checkbox"));
-    checkboxes.map((checkbox) => {
+    checkboxes.forEach((checkbox) => {
       return filtro
         ? (checkbox.checked = false)
         : (checkbox.checked = checkboxes[0].checked);
