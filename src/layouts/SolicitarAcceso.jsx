@@ -47,7 +47,6 @@ export default function SolicitarAcceso({
                     value={email}
                     validators={['required']}
                     errorMessages={['Este campo es requerido']}
-                    onChange={(x,data) => {}}
                     />
 
                     <Input
