@@ -1,10 +1,8 @@
-import React, { Children } from 'react'
-import { Header, Icon, Image, Menu, Segment, Sidebar } from 'semantic-ui-react';
+import React  from 'react'
+import {  Icon,  Menu, Segment, Sidebar } from 'semantic-ui-react';
 import {NavLink} from 'react-router-dom';
 import { useAuth0 } from "@auth0/auth0-react";
-import { createRef } from 'react/cjs/react.production.min';
-import {AccesosService} from "../services/AccesoAut"
-import servicioNotificacion from "../layouts/Notificaciones";
+
 
 export default function SideBar({portalComponent:PortalComponent, history:History, match:Match, permisos}) {
     const { user:usuario,isAuthenticated:estaAutenticado,logout: cerrarSesion } = useAuth0();

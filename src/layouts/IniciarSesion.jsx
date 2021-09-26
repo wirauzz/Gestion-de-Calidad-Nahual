@@ -1,13 +1,11 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Header, Icon, Segment, Button, Image } from "semantic-ui-react";
-import Navbar from "./Encabezado";
 import Logo from "../assets/images/educacion-en-linea.png";
-import { NavLink } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 
 const IniciarSesion = () => {
-  const { loginWithRedirect: iniciarSesion, isAuthenticated, user: usuario } = useAuth0();
+  const { loginWithRedirect: iniciarSesion, isAuthenticated} = useAuth0();
   let history = useHistory();
   function redireccionando() {
     history.push("/home");

@@ -4,10 +4,7 @@ import "semantic-ui-less/semantic.less";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Container, Message, Icon } from "semantic-ui-react";
 import Encabezado from "./layouts/Encabezado";
-import VistaNoAutorizado from "./layouts/VistaNoAutorizado";
 import PieDePagina from "./layouts/PieDePagina"
-import IniciarSesion from './layouts/IniciarSesion.jsx';
-import Egresades from './portales/Egresades/egresades.jsx';
 import ProtegerRuta from './layouts/ProtegerRuta.jsx';
 import Home from './layouts/Home.jsx';
 import Cursos from './portales/Cursos/Cursos.jsx';
@@ -16,9 +13,7 @@ import EditarEgresade from './portales/Egresades/Egresade/EditarEgresade/Editar.
 import Topicos from './portales/Cursos/Topicos/topicos.jsx'
 import Estadisticas from './portales/Egresades/Estadisticas/Estadisticas.jsx';
 import Certificacion from './portales/Egresades/Certificacion/GenerarCertificado.jsx';
-import Alumne from './portales/Cursos/Alumnes/Alumne';
 import ListaDeAlumnesPorCurso from './portales/Cursos/Alumnes/ListaDeAlumnesPorCurso';
-import { useAuth0 } from "@auth0/auth0-react";
 import ValidarInicioSesion from './layouts/ValidarInicioSesion';
 import Empresas  from './portales/Empresas/ListaEgresades/ListaEgresades'
 import Solicitudes from './portales/Admin/lista-solicitudes/Solicitudes';
