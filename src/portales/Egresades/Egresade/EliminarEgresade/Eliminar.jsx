@@ -11,8 +11,6 @@ function Eliminar({ egresadeId, eliminarVista }) {
         EliminarEstudiante(egresadeId)
             .then(response => {
                 eliminarVista();
-            })
-            .catch(function (error) {
             });
         onClose();
     }
