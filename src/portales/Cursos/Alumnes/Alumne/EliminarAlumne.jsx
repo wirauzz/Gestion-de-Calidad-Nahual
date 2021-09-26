@@ -58,7 +58,7 @@ export default function Eliminar({ alumneId, curseId, actualizarAlumnes }) {
             <Modal
                 basic
                 onClose={() => setAbierto(false)}
-                onOpen={() => abrirModal(true)}
+                onOpen={() => abrirModal()}
                 open={abierto}
                 style={{ marginTop: '-200px' }}
                 size='mini'
@@ -66,7 +66,7 @@ export default function Eliminar({ alumneId, curseId, actualizarAlumnes }) {
                     <Button
                         color='red'
                         size= 'small'
-                        onClick={() => abrirModal(true)}
+                        onClick={() => abrirModal()}
                     >
                         Eliminar
                         <Icon name='trash' style={{ margin: '0 0 0 10px' }} />

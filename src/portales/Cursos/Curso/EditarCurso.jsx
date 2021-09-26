@@ -127,8 +127,6 @@ export default function EditarCurso({ idCurso, cursos, setCursos }) {
           .then(curso => { return curso.json() })
           .then(curso => {
               actualizarLista(curso.respuesta)
-          })
-          .then(() => {
           });
           mostrarNotificacion(response.Curso);
           setAbierto(!abierto);

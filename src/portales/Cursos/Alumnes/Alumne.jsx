@@ -12,7 +12,7 @@ function Alumne(props) {
   const [estado, setEstado] = useState('')
 
   useEffect(() => {
-    inicializar(props.cursoId);
+    inicializar();
   }, [props.cursoId]);
 
   function PrimeraLetraEnMayuscula(nombreCompleto) {

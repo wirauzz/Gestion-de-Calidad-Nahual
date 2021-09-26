@@ -54,8 +54,7 @@ class Nahual_Table extends Component {
           filasEncontradas: dat.response,
           cargando: false,
           cantItems: dat.response.length,
-          cantPages: Math.round((dat.response.length/10)+0.5),
-          cargando: false        
+          cantPages: Math.round((dat.response.length/10)+0.5)       
         },()=>{this.buscador({target:{value:''}})});
       })
   }
@@ -117,7 +116,7 @@ class Nahual_Table extends Component {
     this.setState({
       filasEncontradas: resultados,
       valueFilter: nombre.target.value
-    },()=>{});
+    });
     this.state.cantPages= Math.round((resultados.length/10)+0.4)
     this.state.activePage=1
     this.state.firstElemetToShow= ((this.state.activePage-1)*10);

@@ -196,19 +196,18 @@ class ListaEgresades extends Component {
           egresade
         )
       });
+      
     } else {
-      this.state.egresadesSeleccionados.map(() => {
-        return this.setState({
-          egresadesSeleccionados: this.state.egresadesSeleccionados.filter(
-            (e) => e.id !== egresade.id
-          )
-        });
+      return this.setState({
+        egresadesSeleccionados: this.state.egresadesSeleccionados.filter(
+          (e) => e.id !== egresade.id
+        )
       });
     }
   };
   cambiarEstadoDeCheckbox(filtro) {
     let checkboxes = Array.from(document.getElementsByName("checkbox"));
-    checkboxes.map((checkbox) => {
+    checkboxes.forEach((checkbox) => {
       return filtro
         ? (checkbox.checked = false)
         : (checkbox.checked = checkboxes[0].checked);

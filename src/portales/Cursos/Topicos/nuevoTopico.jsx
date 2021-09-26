@@ -21,7 +21,6 @@ export default function NuevoTopico({
             closeIcon
             open={isOpenModal}
             onClose={() => {setIsOpenModal(false);setNuevoTopico('');}}
-            onOpen={() => {}}
         >
             <Modal.Header>
             <Grid columns="equal">

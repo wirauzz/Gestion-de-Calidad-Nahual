@@ -162,7 +162,7 @@ class ListaDeAlumnesPorCurso extends Component {
 
   cambiarEstadoSeleccionable = (cambioCurso) => {
     let checkboxes = Array.from(document.getElementsByName("checkbox"));
-    checkboxes.map((checkbox) => {
+    checkboxes.forEach((checkbox) => {
       return cambioCurso
         ? (checkbox.checked = false)
         : (checkbox.checked = checkboxes[0].checked);
@@ -179,13 +179,12 @@ class ListaDeAlumnesPorCurso extends Component {
       })
     }
     else {
-      this.state.alumnesSeleccionados.map(() => {
         return this.setState({
           alumnesSeleccionados: this.state.alumnesSeleccionados.filter(
             (a) => a.estudiante.id !== alumne.estudiante.id
           )
         });
-      })
+      
     }
   }
 

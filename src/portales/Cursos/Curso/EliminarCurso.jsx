@@ -42,15 +42,14 @@ export default function EliminarCurso({ idCurso, cursos, setCursos }) {
     }
 
     function eliminar() {
-        alumnes.map(alumne => {
-            eliminarInscripto(alumne.id)
-                .then((x) => {
-                    return x.data;
-                })
-                .then(() => {
-                    EliminarEstudiante(alumne.estudiante.id)
-                });
-        })
+
+        eliminarInscripto(alumnes.id)
+            .then((x) => {
+                return x.data;
+            })
+            .then(() => {
+                EliminarEstudiante(alumnes.estudiante.id)
+            });
         eliminarCurso(idCurso)
             .then((x) => {
                 setAbierto(false);
@@ -103,7 +102,7 @@ export default function EliminarCurso({ idCurso, cursos, setCursos }) {
                         <Button
                             color='green'
                             inverted
-                            onClick={() => { eliminar(false) }}>
+                            onClick={() => { eliminar() }}>
                             <Icon name='checkmark' />
                             Confirmar
                         </Button>
