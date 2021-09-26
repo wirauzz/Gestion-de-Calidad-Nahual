@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {Modal, Image } from 'semantic-ui-react'
 import LogoNahual from '../../../../src/assets/images/logo-proyecto-nahual.webp'
 import FormAcceso from "./FormAcceso"

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Label, Message, Table, Icon, Checkbox } from "semantic-ui-react";
+import { Button, Label, Message, Table, Icon } from "semantic-ui-react";
 
 const SERVICIO_DE_SOLICITAR_ACCESO_NAHUAL = process.env.REACT_APP_AUTENTICACION_NAHUAL_API;
 export default class SolicitudesPendientes extends Component {
@@ -26,7 +26,7 @@ export default class SolicitudesPendientes extends Component {
                     this.setState({
                         solicitudes: respuesta.data
                     });    
-                    if(this.state.solicitudes.isChecked==false){
+                    if(!this.state.solicitudes.isChecked){
                         console.log(this.state.solicitudes);
                     }
                 this.props.mostrarCargando(false);
@@ -132,7 +132,7 @@ export default class SolicitudesPendientes extends Component {
         }
     }
     onChecked=(solicitud)=>{
-        if(this.handleCheck(solicitud)== false){
+        if(!this.handleCheck(solicitud)){
             this.state.solicitudesMarcadas.push(solicitud);
         }
         else{

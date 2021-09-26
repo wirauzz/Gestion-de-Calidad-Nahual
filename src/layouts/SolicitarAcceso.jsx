@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button, Icon, Modal, Grid, Image, TextArea } from "semantic-ui-react";
 import { Form, Input } from 'semantic-ui-react-form-validator'
 import LogoNahual from "../assets/images/logo-proyecto-nahual.webp";

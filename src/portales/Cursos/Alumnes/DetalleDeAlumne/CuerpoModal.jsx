@@ -1,7 +1,7 @@
 import React from "react";
 import InformacionPersonal from "./InformacionPersonal";
 import LogoNahual from "../../../../assets/images/logo-proyecto-nahual.webp";
-import { Button, Modal, Image, Grid, Dimmer, Loader } from "semantic-ui-react";
+import { Button, Modal, Image, Grid} from "semantic-ui-react";
 
 const CuerpoModal = ({ alumne, cerrarModal }) => {
   return (
