@@ -77,7 +77,7 @@ class Nahual_Table extends Component {
 
   onSearchChange = async e => {
     e.persist();
-    await this.setState({busqueda: e.target.value});
+    this.setState({busqueda: e.target.value});
     this.filtrarEgresades();
   }
 

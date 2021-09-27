@@ -32,7 +32,7 @@ function Alumne(props) {
       .then(curso => {
         if (curso.respuesta != null) {
           setEsEgresade(curso.respuesta.esEgresade);
-        };
+        }
       });
   }
 

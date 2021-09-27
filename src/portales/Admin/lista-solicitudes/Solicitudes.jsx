@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { Container, Tab, Divider, Header, Icon, Grid } from "semantic-ui-react";
 import SolicitudesAprobadas from "./SolicitudesAprobadas";
 import SolicitudesPendientes from "./SolicitudesPendientes";
@@ -87,4 +87,4 @@ export default function Solicitudes() {
             </Container>
         </div>
     );
-};
+}

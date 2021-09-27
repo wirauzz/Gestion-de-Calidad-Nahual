@@ -1,8 +1,7 @@
-import React, { useEffect, useState} from "react";
+import React, { useState} from "react";
 import { Button, Modal, Grid, Label, Table, Divider } from "semantic-ui-react";
 import { obtenerCurso } from "../../../../services/Curso";
-import { EliminarEstudiante, CrearEstudiante, ObtenerEstudiantes } from '../../../../services/Estudiante'
-import {obtenerInscriptosDeCurso, crearInscripto} from '../../../../services/Inscripto';
+import {obtenerInscriptosDeCurso} from '../../../../services/Inscripto';
 import Previsualizar from './Previsualizar'
 import exampleXlsx from "../../../../assets/exampleAlumnes.csv";
 import CargaCSV from "./CargaCSV.jsx"
