@@ -9,7 +9,6 @@ export default function EliminarTopico({isOpenModalDeletTopic,setIsOpenModalDele
             closeIcon
             open={isOpenModalDeletTopic}
             onClose={() => {setIsOpenModalDeletTopic(false)}}
-            onOpen={() => {}}
         >
             <Modal.Header>
                 <h1>Eliminar Tópico</h1>

@@ -116,7 +116,7 @@ class Nahual_Table extends Component {
     this.setState({
       filasEncontradas: resultados,
       valueFilter: nombre.target.value
-    },()=>{});
+    });
     this.state.cantPages= Math.round((resultados.length/10)+0.4)
     this.state.activePage=1
     this.state.firstElemetToShow= ((this.state.activePage-1)*10);
