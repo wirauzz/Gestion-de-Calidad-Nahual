@@ -1,10 +1,9 @@
 import React, {  Component } from "react";
 import 'semantic-ui-css/semantic.css';
-import { Button, Grid, GridRow, Confirm } from 'semantic-ui-react';
+import { Button, Grid, GridRow} from 'semantic-ui-react';
 import { Form, Input, Dropdown } from 'semantic-ui-react-form-validator';
 import '../../../../styles/EgresadesStyles/Registrar.css';
 import 'semantic-ui-css/semantic.min.css';
-import { OpcionesDeCuatrimestre } from './OpcionesDeSeleccion/OpcionesDeCuatrimestre';
 import { OpcionesDeNivelDeIngles } from './OpcionesDeSeleccion/OpcionesDeNivelDeIngles';
 import { OpcionesDeEstadoLaboral } from './OpcionesDeSeleccion/OpcionesDeEstadoLaboral';
 import { MensajeResultante } from './TipoDeMensaje/MensajeResultante';

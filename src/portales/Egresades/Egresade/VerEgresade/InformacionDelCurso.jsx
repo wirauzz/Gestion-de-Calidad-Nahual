@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, Grid, Header, Label } from "semantic-ui-react";
+import { Icon, Grid, Header } from "semantic-ui-react";
 import '../../../../styles/EgresadesStyles/InformacionDelCurso.css';
 
 function InformacionDelCurso({ egresade, cursos }) {
