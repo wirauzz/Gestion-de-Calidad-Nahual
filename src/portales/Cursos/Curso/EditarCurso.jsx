@@ -71,7 +71,7 @@ export default function EditarCurso({ idCurso, cursos, setCursos }) {
           setNota(curso.respuesta.notas);
           setProfesor(curso.respuesta.profesores);
           setEsEgresade(curso.respuesta.esEgresade);
-        };
+        }
       });
   }
 

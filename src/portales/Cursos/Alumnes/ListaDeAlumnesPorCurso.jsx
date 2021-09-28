@@ -1,7 +1,7 @@
 import Axios from "axios";
 import React, { Component } from "react";
 import OpcionesDeCurso from "./OpcionesDeCurso";
-import { Dimmer, Header, Loader, Message, Icon, Table, Divider, Grid, Button } from "semantic-ui-react";
+import { Dimmer, Header, Loader, Message, Icon, Table, Divider, Grid } from "semantic-ui-react";
 import Alumne from "./Alumne";
 import ModalCambioEstado from "./ModalCambioEstado.jsx";
 import BotonExportar from "./BotonExportar";
@@ -70,7 +70,7 @@ class ListaDeAlumnesPorCurso extends Component {
           this.setState({
             esEgresade: curso.respuesta.esEgresade
           });
-        };
+        }
       });
 
   }
