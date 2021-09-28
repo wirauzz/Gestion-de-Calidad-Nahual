@@ -102,70 +102,79 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
         );
     }
 
-    function validarFormulario(data, tipo) {
-        switch (tipo) {
-            case "dni":
-                setDni(data)
-                if (data.length !== 0)
-                    setValidacionDni(true)
-                break;
-            case "tipoDNI":
-                setTipoDNI(data)
-                break;
-            case "sede-nodo":
-                setValidacionNodo(true)
-                break;
-            case "nombres":
-                setNombres(data)
-                if (data.length !== 0)
-                    setValidacionNombres(true)
-                break;
-            case "apellidos":
-                setApellidos(data)
-                if (data.length !== 0)
-                    setValidacionApellidos(true)
-                break;
-            case "correoElectronico":
-                setCorreoElectronico(data)
-                if (data.length !== 0)
-                    setValidacionCorreoElectronico(true)
-                break;
-            case "telefono":
-                setTelefono(data)
-                if (data.length !== 0)
-                    setValidacionTelefono(true)
-                break;
-            case "nivelDeIngles":
-                setValidacionNivelDeIngles(true)
-                break;
-            case "nacionalidad":
-                setNacionalidad(data)
-                if (data.length !== 0)
-                    setValidacionNacionalidad(true)
-                break;
-            case "correoOpcional":
-                setCorreoOpcional(data)
-                if (data.length !== 0)
-                    setValidacionCorreoOpcional(true)
-                break;
-            case "detalle":
-                setDetalle(data)
-                if (data.length !== 0)
-                    setValidacionDetalle(true)
-                break;
 
-        }
-        if (validacionDni &&
-            validacionNodo &&
-            validacionNombres &&
-            validacionApellidos &&
-            validacionCorreoElectronico &&
-            validacionTelefono &&
-            validacionNivelDeIngles &&
-            validacionNacionalidad) {
+    function onChangeDni(data){
+        setDni(data)
+        if (data.length !== 0)
+            setValidacionDni(true)
+    }
 
+    function onChangeTipoDni(data){
+        setTipoDNI(data)
+    }
+
+    function onChangeNodoSede(data){
+        setValidacionNodo(true)
+    }
+
+    function onChangeNombre(data){
+        setNombres(data)
+        if (data.length !== 0)
+            setValidacionNombres(true)
+    }
+
+    function onChangeApellido(data){
+        setApellidos(data)
+        if (data.length !== 0)
+            setValidacionApellidos(true)
+    }
+    
+    function onChangeCorreoElectronico(data){
+        setCorreoElectronico(data)
+        if (data.length !== 0)
+            setValidacionCorreoElectronico(true)
+    }
+
+    function onChangeTelefono(data){
+        setTelefono(data)
+        if (data.length !== 0)
+            setValidacionTelefono(true)
+    }
+
+    function onChangeNivelIngles(data){
+        setValidacionNivelDeIngles(true)
+    }
+
+    function onChangeNacionalidad(data){
+        setNacionalidad(data)
+        if (data.length !== 0)
+            setValidacionNacionalidad(true)
+    }
+
+    function onChangeCorreoOpcional(data){
+        setCorreoOpcional(data)
+        if (data.length !== 0)
+            setValidacionCorreoOpcional(true)
+    }
+
+    function onChangeDetalles(data){
+        setDetalle(data)
+        if (data.length !== 0)
+            setValidacionDetalle(true)
+    }
+
+
+    function comprobarCampos() {
+        if(validarFormulario()){
             setHabilitado(true);
         }
+    }
+
+
+    function validarFormulario()
+    {
+        return validacionDni && validacionNodo && validacionNombres && validacionApellidos 
+        && validacionCorreoElectronico && validacionTelefono && validacionNivelDeIngles && validacionNacionalidad
     }
 
     function crearAlumne() {
@@ -246,7 +255,9 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
                         fluid
                         type="text"
                         class={"form-control"}
-                        onChange={(x, data) => validarFormulario(data.value, "dni")}
+                        onChange={(x, data) => {
+                            onChangeDni(data.value)
+                            comprobarCampos()}}
                         required={true}
                     />
                     <Form.Input
@@ -254,14 +265,18 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
                         fluid
                         type="text"
                         class={"form-control"}
-                        onChange={(x, data) => validarFormulario(data.value, "tipoDNI")}
+                        onChange={(x, data) => {
+                            onChangeTipoDni(data.value)
+                            comprobarCampos()}}
                     />
                     <Form.Input
                         label="Nombre/s"
                         fluid
                         type="text"
                         class="form-control"
-                        onChange={(x, data) => validarFormulario(data.value, "nombres")}
+                        onChange={(x, data) => {
+                            onChangeNombre(data.value)
+                            comprobarCampos()}}
                         required={true}
                     />
                     <Form.Input
@@ -269,7 +284,9 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
                         fluid
                         type="text"
                         class="form-control"
-                        onChange={(x, data) => validarFormulario(data.value, "apellidos")}
+                        onChange={(x, data) => {
+                            onChangeApellido(data.value)
+                            comprobarCampos()}}
                         required={true}
                     />
                     <Form.Input
@@ -278,7 +295,9 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
                         placeholder="correo@ejemplo.com"
                         type="text"
                         class="form-control"
-                        onChange={(x, data) => validarFormulario(data.value, "correoElectronico")}
+                        onChange={(x, data) => { 
+                            onChangeCorreoElectronico(data.value)
+                            comprobarCampos()}}
                         required={true}
                     />
                     <Form.Input
@@ -287,7 +306,9 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
                         placeholder="+000 0000000000"
                         type="text"
                         class="form-control"
-                        onChange={(x, data) => validarFormulario(data.value, "telefono")}
+                        onChange={(x, data) =>{ 
+                            onChangeTelefono(data.value)
+                            comprobarCampos()}}
                         required={true}
                     />
                     <div className="field">
@@ -325,12 +346,14 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
                         })}
                         onChange={(e, data) => {
                             const selected = data.value;
-                            validarFormulario(data.value, "sede-nodo")
+                            onChangeNodoSede(data.value)
                             setSedeNodo({
                                 SedeId: selected[1],
                                 NodoId: selected[0],
                             });
                             setValidacionNodo(true)
+                            comprobarCampos()
+
                         }}
                         required={true}
                     />
@@ -346,8 +369,9 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
                             };
                         })}
                         onChange={(x, data) => {
-                            setNivelDeIngles(data.value);
-                            validarFormulario(data.value, "nivelDeIngles")
+                            setNivelDeIngles(data.value)
+                            onChangeNivelIngles(data.value)
+                            comprobarCampos()
                         }}
                         required={true}
                     />
@@ -357,8 +381,9 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
                         type="text"
                         class="form-control"
                         onChange={(x, data) => {
-                            setValidacionNacionalidad(true);
-                            validarFormulario(data.value, "nacionalidad")
+                            setValidacionNacionalidad(true)
+                            onChangeNacionalidad(data.value)
+                            comprobarCampos()
                         }}
                         required={true}
                     />
@@ -367,7 +392,9 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
                         fluid
                         type="text"
                         class="form-control"
-                        onChange={(x, data) => validarFormulario(data.value, "correoOpcional")}
+                        onChange={(x, data) =>{ 
+                            onChangeCorreoOpcional(data.value)
+                            comprobarCampos()}}
                     />
                     <Form.Input
                         label="Detalle"
@@ -375,7 +402,9 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
                         type="text"
                         class="form-control"
                         control={TextArea}
-                        onChange={(x, data) => validarFormulario(data.value, "detalle")}
+                        onChange={(x, data) => {
+                            onChangeDetalles(data.value)
+                            comprobarCampos() }}
                     />
                 </Form>
             </Modal.Content>
