@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import InformacionPersonal from "./InformacionPersonal";
 import InformacionDeCursos from "./InformacionDeCursos";
 import LogoNahual from '../../../assets/images/logo-proyecto-nahual.webp'
