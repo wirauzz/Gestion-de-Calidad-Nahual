@@ -98,9 +98,9 @@ export default class SolicitudesPendientes extends Component {
             body: JSON.stringify(value)
         };
         try {
-            var res = await fetch(`${SERVICIO_DE_SOLICITAR_ACCESO_NAHUAL}/solicitudes/rechazar/${value.id}`, { method: 'DELETE' })
-        } catch (error) {
-            console.log(error);
+            await fetch(`${SERVICIO_DE_SOLICITAR_ACCESO_NAHUAL}/solicitudes/rechazar/${value.id}`, { method: 'DELETE' }, requestOptions) 
+        } catch (res) {
+            console.log(res);
         }
         this.setState({ isLoading: false })
         this.componentDidMount()

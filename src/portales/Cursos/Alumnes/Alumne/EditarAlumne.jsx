@@ -31,17 +31,15 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
     const [sede, setSede] = useState("");
     const [nodo, setNodo] = useState("");
 
-    const [validacionDni, setValidacionDni] = useState(false)
-    const [validacionNombres, setValidacionNombres] = useState(false)
-    const [validacionApellidos, setValidacionApellidos] = useState(false)
-    const [validacionCorreoElectronico, setValidacionCorreoElectronico] = useState(false)
-    const [validacionTelefono, setValidacionTelefono] = useState(false)
-    const [validacionFechaDeNacimiento, setValidacionFechaDeNacimiento] = useState(false)
-    const [validacionNivelDeIngles, setValidacionNivelDeIngles] = useState(false)
-    const [validacionNacionalidad, setValidacionNacionalidad] = useState(false)
-    const [validacionCorreoOpcional, setValidacionCorreoOpcional] = useState(false)
-    const [validacionDetalle, setValidacionDetalle] = useState(false)
-    const [validacionNodo, setValidacionNodo] = useState(false)
+    const [validacionDni, setValidacionDni] = useState(true)
+    const [validacionNombres, setValidacionNombres] = useState(true)
+    const [validacionApellidos, setValidacionApellidos] = useState(true)
+    const [validacionCorreoElectronico, setValidacionCorreoElectronico] = useState(true)
+    const [validacionTelefono, setValidacionTelefono] = useState(true)
+    const [validacionFechaDeNacimiento, setValidacionFechaDeNacimiento] = useState(true)
+    const [validacionNivelDeIngles, setValidacionNivelDeIngles] = useState(true)
+    const [validacionNacionalidad, setValidacionNacionalidad] = useState(true)
+    const [validacionNodo, setValidacionNodo] = useState(true)
 
 
     function inicializar() {
@@ -150,14 +148,10 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
 
     function onChangeCorreoOpcional(data){
         setCorreoOpcional(data)
-        if (data.length !== 0)
-            setValidacionCorreoOpcional(true)
     }
 
     function onChangeDetalles(data){
         setDetalle(data)
-        if (data.length !== 0)
-            setValidacionDetalle(true)
     }
 
 
@@ -466,6 +460,7 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
                         className="confirmButton"
                         color="green"
                         size="small"
+                        disabled={!habilitado}
                         onClick={() => {
                             EditarAlumne();
                             setEstaAbierto(!estaAbierto);
