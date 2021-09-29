@@ -5,7 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 
 export default function SideBar({portalComponent:PortalComponent, history:History, match:Match, permisos}) {
-    const { user:usuario,isAuthenticated:estaAutenticado,logout: cerrarSesion } = useAuth0();
+    
     const botonActual = window.location.href.split('/').find((el)=> el === 'home' || el === 'egresades' || el === 'cursos' || el === 'panel-administrador' || el === 'empresas');
     return (
         <Sidebar.Pushable as={Segment}  style={{height:"calc(100vh - 225px)", width:"100vw", paddingLeft:"0px", overflow:"auto"}}>
