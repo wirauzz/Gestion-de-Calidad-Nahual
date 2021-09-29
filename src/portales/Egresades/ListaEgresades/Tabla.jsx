@@ -86,6 +86,12 @@ class Nahual_Table extends Component {
       return el.Estado.toLowerCase().indexOf(currentFilter.toLowerCase()) !== -1
     })
   }
+
+  searchItem(arr, currentFilter) {
+    return arr.filter(function(el) {
+      return el.nombre.toLowerCase().indexOf(currentFilter.toLowerCase()) !== -1
+    })
+  }
   
   buscador(nombre){
     let buscado = nombre.target.value;
@@ -97,7 +103,7 @@ class Nahual_Table extends Component {
       });
     }
 
-    resultados = this.filterItems(this.filterItems(listaEgresades, buscado), this.state.currentFilter)
+    resultados = this.filterItems(this.searchItem(listaEgresades, buscado), this.state.currentFilter)
     
     this.setState({
       filasEncontradas: resultados,
