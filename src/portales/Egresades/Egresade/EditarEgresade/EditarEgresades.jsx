@@ -304,7 +304,7 @@ export class EditarEgresades extends Component {
   }
 
   render() {
-    const { isVisibleErrorMessage, isVisibleSuccessMessage, egresade } = this.state;
+    const { isVisibleErrorMessage, isVisibleSuccessMessage } = this.state;
     return (
       <div className="contenedor">
         <Form id="myForm" onSubmit={() => this.handleConfirmEdition()} className="ui form">
