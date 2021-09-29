@@ -172,8 +172,6 @@ export class EditarEgresades extends Component {
       setTimeout(() => {
         this.setState({ isVisibleSuccessMessage: false });
         this.props.history.push("/egresades");
-        //browserHistory.push("/egresades");
-        //return <Redirect to="/egresades" />
       }, 700);
     }
   }
