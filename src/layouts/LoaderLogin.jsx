@@ -9,9 +9,7 @@ const LoaderLogin = (props) => {
     mostrarIconoCargando: true,
   });
 
-  /* useEffect(() => {
-    verificarAutorizacion();
-  }, [estado]); */
+  
 
   let history = useHistory();
   function redireccionando() {
