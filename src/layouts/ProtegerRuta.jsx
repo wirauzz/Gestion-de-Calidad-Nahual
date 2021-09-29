@@ -18,10 +18,6 @@ const ProtegerRuta = ({ component: Component, ...args }) => {
   });
 
   const ValidarTieneAcceso = () => {
-    const datos = JSON.stringify({
-      nombre: usuario.name,
-      email: usuario.email
-    });
     if (estado.intentosIniciarSesion <= INTENTOS_MAXIMOS_LOGIN) {
        AccesosService.VerificarAccesoApp(usuario.email)
         .then((respuesta) => {
