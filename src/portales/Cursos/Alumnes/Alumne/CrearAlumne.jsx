@@ -4,7 +4,7 @@ import LogoNahual from "../../../../assets/images/logo-proyecto-nahual.webp"
 import { obtenerSedes } from '../../../../services/Sede';
 import { obtenerNivelesIngles } from '../../../../services/NivelIngles';
 import { CrearEstudiante } from '../../../../services/Estudiante';
-import servicioNotificacion from "../../../../services/Notificacion";
+import servicioNotificacion from "../../../../layouts/Notificaciones";
 import { crearInscripto } from '../../../../services/Inscripto';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';

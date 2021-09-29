@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Header, Icon, Modal, Grid } from "semantic-ui-react";
 import { EliminarEstudiante } from '../../../../services/Estudiante';
 import { eliminarInscripto, obtenerInscriptosDeCurso } from '../../../../services/Inscripto';
-import servicioNotificacion from "../../../../services/Notificacion";
+import servicioNotificacion from "../../../../layouts/Notificaciones";
 
 export default function Eliminar({ alumneId, curseId, actualizarAlumnes }) {
 

@@ -3,7 +3,7 @@ import { Button, Icon, Modal, Header, Grid } from 'semantic-ui-react'
 import { eliminarCurso } from "../../../services/Curso";
 import { EliminarEstudiante } from '../../../services/Estudiante'
 import { obtenerInscriptosDeCurso, eliminarInscripto } from "../../../services/Inscripto";
-import servicionotificacion from "../../../services/Notificacion";
+import servicionotificacion from "../../../layouts/Notificaciones";
 
 
 export default function EliminarCurso({ idCurso, cursos, setCursos }) {
