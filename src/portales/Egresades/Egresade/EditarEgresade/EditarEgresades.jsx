@@ -558,6 +558,4 @@ export class EditarEgresades extends Component {
   }
 }
 export default EditarEgresades;
-/* export default withRouter(withAuthenticationRequired(EditarEgresades, {
-  onRedirecting: () => <VistaNoAutorizado />,
-})); */
+
