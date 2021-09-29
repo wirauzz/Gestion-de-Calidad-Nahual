@@ -45,10 +45,10 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
     function inicializar() {
         inicializarSedes();
         inicializarNivelesIngles();
-        inicializarEstudiantes(alumneId)
+        inicializarEstudiantes()
     }
 
-    function inicializarEstudiantes(alumneId) {
+    function inicializarEstudiantes() {
         ObtenerEstudianteSinDTO(alumneId)
             .then(alumne => { return alumne })
             .then(alumne => {
