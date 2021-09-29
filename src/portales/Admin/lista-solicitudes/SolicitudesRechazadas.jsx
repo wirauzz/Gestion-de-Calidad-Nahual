@@ -69,7 +69,7 @@ export default class SolicitudesRechazadas extends Component {
         body: JSON.stringify(value)
       };
       try {
-        var res = await fetch(`${SERVICIO_DE_SOLICITAR_ACCESO_NAHUAL}/usuariosRechazados/${value.id}`,{method:'DELETE'})
+        await fetch(`${SERVICIO_DE_SOLICITAR_ACCESO_NAHUAL}/usuariosRechazados/${value.id}`,{method:'DELETE'}, requestOptions)
       } catch (error) {
         console.log(error);
       }

@@ -36,8 +36,6 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
     const [validacionTelefono, setValidacionTelefono] = useState(false)
     const [validacionNivelDeIngles, setValidacionNivelDeIngles] = useState(false)
     const [validacionNacionalidad, setValidacionNacionalidad] = useState(false)
-    const [validacionCorreoOpcional, setValidacionCorreoOpcional] = useState(false)
-    const [validacionDetalle, setValidacionDetalle] = useState(false)
     const [validacionNodo, setValidacionNodo] = useState(false)
 
     function resetValores() {
@@ -60,8 +58,6 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
         setValidacionTelefono(false);
         setValidacionNivelDeIngles(false);
         setValidacionNacionalidad(false);
-        setValidacionCorreoOpcional(false);
-        setValidacionDetalle(false);
 
         inicializarSedes();
         inicializarNivelesIngles();
@@ -153,14 +149,12 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
 
     function onChangeCorreoOpcional(data){
         setCorreoOpcional(data)
-        if (data.length !== 0)
-            setValidacionCorreoOpcional(true)
+
     }
 
     function onChangeDetalles(data){
         setDetalle(data)
-        if (data.length !== 0)
-            setValidacionDetalle(true)
+     
     }
 
 
@@ -173,8 +167,8 @@ export default function CrearAlumne({ idCurso, actualizarAlumnes}) {
 
     function validarFormulario()
     {
-        return validacionDni && validacionNodo && validacionNombres && validacionApellidos 
-        && validacionCorreoElectronico && validacionTelefono && validacionNivelDeIngles && validacionNacionalidad
+        return (validacionDni && validacionNodo && validacionNombres && validacionApellidos 
+        && validacionCorreoElectronico && validacionTelefono && validacionNivelDeIngles && validacionNacionalidad)
     }
 
     function crearAlumne() {
