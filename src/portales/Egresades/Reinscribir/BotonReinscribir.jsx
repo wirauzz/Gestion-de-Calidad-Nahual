@@ -4,7 +4,7 @@ import '../../../styles/EgresadesStyles/Modal.css'
 import {ObtenerEgresade} from '../../../services/Estudiante.js';
 import {obtenerCursos} from '../../../services/Curso.js';
 import {crearInscripto} from '../../../services/Inscripto.js'
-import servicioNotificacion from "../../../services/Notificacion";
+import servicioNotificacion from "../../../layouts/Notificaciones";
 import LogoNahual from '../../../assets/images/logo-proyecto-nahual.webp';
 
 export default function BotonReinscribir({idEgresade}) {

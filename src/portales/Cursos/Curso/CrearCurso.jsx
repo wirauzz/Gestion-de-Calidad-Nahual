@@ -4,7 +4,7 @@ import { obtenerSedes } from "../../../services/Sede";
 import { crearCurso, obtenerCursoPorId } from "../../../services/Curso";
 import { obtenerModulos } from "../../../services/Modulo";
 import LogoNahual from '../../../assets/images/logo-proyecto-nahual.webp'
-import servicioNotificacion from "../../../services/Notificacion";
+import servicioNotificacion from "../../../layouts/Notificaciones";
 
 export default function CrearCurso({ estaAbierto, setAbierto, cursos, setCursos }) {
   const [topicos, setTopicos] = useState([]);

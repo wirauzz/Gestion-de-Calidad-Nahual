@@ -4,7 +4,7 @@ import { obtenerSedes } from "../../../services/Sede"
 import { editarCurso, obtenerCurso } from "../../../services/Curso";
 import { obtenerModulos } from "../../../services/Modulo";
 import LogoNahual from '../../../assets/images/logo-proyecto-nahual.webp'
-import servicioNotificacion from "../../../services/Notificacion";
+import servicioNotificacion from "../../../layouts/Notificaciones";
 
 export default function EditarCurso({ idCurso, cursos, setCursos }) {
 

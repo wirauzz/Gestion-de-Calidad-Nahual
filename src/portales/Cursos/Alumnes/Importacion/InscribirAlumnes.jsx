@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Modal, Grid } from "semantic-ui-react";
 import { crearInscripto, eliminarInscripto } from '../../../../services/Inscripto';
 import { EliminarEstudiante, CrearEstudiante } from '../../../../services/Estudiante'
-import servicioNotificacion from "../../../../services/Notificacion";
+import servicioNotificacion from "../../../../layouts/Notificaciones";
 
 export default function InscribirAlumnes({ eliminados, alumnes, setAlumnes, curso, setPrimerModal, eliminar, setMostrarLista, actualizarAlumnes }) {
 
