@@ -25,7 +25,6 @@ const publicarListaDeEgresades_URL = `${process.env.REACT_APP_SERVICIO_DE_DATOS_
 
 class ModalDeImportar extends Component {
    obtenerNodosYSedes = async () => {
-      //const API_URL = `${process.env.REACT_APP_SERVICIO_DE_DATOS_API}/nodos/`;
       await ObtenerNodosYSedes()
          .then((response) => {
             this.setState({
