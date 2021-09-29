@@ -15,11 +15,6 @@ export default function SolicitarAcceso({
     const [nombre, setNombre] = useState(user.name);
     const [motivo, setMotivo] = useState('');
 
-/*     const resetVariables = () => {
-        setIsOpenModalEditTopic(false);
-        updateTopicsTable();
-        setNombreTopico('');
-    } */
     return (
         <Modal
             closeIcon
