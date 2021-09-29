@@ -1,7 +1,6 @@
 import React  from 'react'
 import {  Icon,  Menu, Segment, Sidebar } from 'semantic-ui-react';
 import {NavLink} from 'react-router-dom';
-import { useAuth0 } from "@auth0/auth0-react";
 
 
 export default function SideBar({portalComponent:PortalComponent, history:History, match:Match, permisos}) {
