@@ -185,7 +185,6 @@ export class EditarEgresades extends Component {
     let graduateData;
     egresadeAEnviar.nivelInglesId = this.existeNivelIngles(this.state.egresade.nivelIngles)
     egresadeAEnviar = this.obtenerFechaNacimiento(egresadeAEnviar);
-    //egresadeAEnviar.celular = parseInt(egresadeAEnviar.celular);
     egresadeAEnviar.trabajaActualmente = OpcionesDeEstadoLaboral.filter(op => op.value === this.state.egresade.trabajaActualmente)[0].valueToSend;
     egresadeAEnviar.fechaNacimiento = egresadeAEnviar.fechaNacimiento === "" ? null :  egresadeAEnviar.fechaNacimiento;
     delete egresadeAEnviar.nodo;
