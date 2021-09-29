@@ -460,7 +460,6 @@ export class EditarEgresades extends Component {
                     placeholder={this.state.egresade.trabajaActualmente? "Empleade":"Desempleado"}
                     onChange={this.onChangeDropdown}
                     options={OpcionesDeEstadoLaboral}
-                    //value={this.state.egresade.trabajaActualmente? "Empleade":"Desempleado"}
                     style={{ margin: "0px 15%" }}
                     selection
                   />
