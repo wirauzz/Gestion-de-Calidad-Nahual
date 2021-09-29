@@ -95,77 +95,85 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
 
 
 
-    function validarFormulario(data, tipo) {
-        switch (tipo) {
-            case "dni":
-                setDni(data)
-                if (data.length !== 0)
-                    setValidacionDni(true)
-                break;
-            case "tipoDNI":
-                setTipoDNI(data)
-                break;
-            case "sede-nodo":
-                setValidacionNodo(true)
-                break;
-            case "nombres":
-                setNombres(data)
-                if (data.length !== 0)
-                    setValidacionNombres(true)
-                break;
-            case "apellidos":
-                setApellidos(data)
-                if (data.length !== 0)
-                    setValidacionApellidos(true)
-                break;
-            case "correoElectronico":
-                setCorreoElectronico(data)
-                if (data.length !== 0)
-                    setValidacionCorreoElectronico(true)
-                break;
-            case "telefono":
-                setTelefono(data)
-                if (data.length !== 0)
-                    setValidacionTelefono(true)
-                break;
-            case "fechaDeNacimiento":
-                setFechaDeNacimiento(data)
-                if (data.length !== 0)
-                    setValidacionFechaDeNacimiento(true)
-                break;
-            case "nivelDeIngles":
-                setValidacionNivelDeIngles(true)
-                break;
-            case "nacionalidad":
-                setNacionalidad(data)
-                if (data.length !== 0)
-                    setValidacionNacionalidad(true)
-                break;
-            case "correoOpcional":
-                setCorreoOpcional(data)
-                if (data.length !== 0)
-                    setValidacionCorreoOpcional(true)
-                break;
-            case "detalle":
-                setDetalle(data)
-                if (data.length !== 0)
-                    setValidacionDetalle(true)
-                break;
+    function onChangeDni(data){
+        setDni(data)
+        if (data.length !== 0)
+            setValidacionDni(true)
+    }
 
-        }
-        if (validacionDni &&
-            validacionNodo &&
-            validacionNombres &&
-            validacionApellidos &&
-            validacionCorreoElectronico &&
-            validacionTelefono &&
-            validacionFechaDeNacimiento &&
-            validacionNivelDeIngles &&
-            validacionNacionalidad) {
+    function onChangeTipoDni(data){
+        setTipoDNI(data)
+    }
 
+    function onChangeNodoSede(data){
+        setValidacionNodo(true)
+    }
+
+    function onChangeNombre(data){
+        setNombres(data)
+        if (data.length !== 0)
+            setValidacionNombres(true)
+    }
+
+    function onChangeApellido(data){
+        setApellidos(data)
+        if (data.length !== 0)
+            setValidacionApellidos(true)
+    }
+    
+    function onChangeCorreoElectronico(data){
+        setCorreoElectronico(data)
+        if (data.length !== 0)
+            setValidacionCorreoElectronico(true)
+    }
+
+    function onChangeTelefono(data){
+        setTelefono(data)
+        if (data.length !== 0)
+            setValidacionTelefono(true)
+    }
+
+    function onChangeFechaNacimiento(data){
+        setFechaDeNacimiento(data)
+        if (data.length !== 0)
+            setValidacionFechaDeNacimiento(true)
+    }
+    function onChangeNivelIngles(data){
+        setValidacionNivelDeIngles(true)
+    }
+
+    function onChangeNacionalidad(data){
+        setNacionalidad(data)
+        if (data.length !== 0)
+            setValidacionNacionalidad(true)
+    }
+
+    function onChangeCorreoOpcional(data){
+        setCorreoOpcional(data)
+        if (data.length !== 0)
+            setValidacionCorreoOpcional(true)
+    }
+
+    function onChangeDetalles(data){
+        setDetalle(data)
+        if (data.length !== 0)
+            setValidacionDetalle(true)
+    }
+
+
+    function comprobarCampos() {
+        if(validarFormulario()){
             setHabilitado(true);
         }
     }
+
+
+    function validarFormulario()
+    {
+        return validacionDni && validacionNodo && validacionNombres && validacionApellidos 
+        && validacionCorreoElectronico && validacionTelefono && validacionNivelDeIngles && validacionNacionalidad && validacionFechaDeNacimiento
+    }
+
 
     function EditarAlumne() {
         ActualizarEstudiante(alumneId, {
@@ -247,7 +255,9 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
                                         value={dni}
                                         type="text"
                                         class={"form-control"}
-                                        onChange={(x, data) => validarFormulario(data.value, "dni")}
+                                        onChange={(x, data) => {
+                                            onChangeDni(data.value)
+                                            comprobarCampos()}}
                                         required={true}
                                     />
                                 </Grid.Column>
@@ -258,7 +268,9 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
                                         value={tipoDNI}
                                         type="text"
                                         class={"form-control"}
-                                        onChange={(x, data) => validarFormulario(data.value, "tipoDNI")}
+                                        onChange={(x, data) => {
+                                            onChangeTipoDni(data.value)
+                                            comprobarCampos()}}
                                     />
                                 </Grid.Column>
                                 <Grid.Column>
@@ -268,7 +280,9 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
                                         value={nombres}
                                         type="text"
                                         class="form-control"
-                                        onChange={(x, data) => validarFormulario(data.value, "nombres")}
+                                        onChange={(x, data) => {
+                                            onChangeNombre(data.value)
+                                            comprobarCampos()}}
                                         required={true}
                                     />
                                 </Grid.Column>
@@ -279,7 +293,9 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
                                         value={apellidos}
                                         type="text"
                                         class="form-control"
-                                        onChange={(x, data) => validarFormulario(data.value, "apellidos")}
+                                        onChange={(x, data) => {
+                                            onChangeApellido(data.value)
+                                            comprobarCampos()}}
                                         required={true}
                                     />
                                 </Grid.Column>
@@ -291,7 +307,9 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
                                         placeholder="correo@ejemplo.com"
                                         type="text"
                                         class="form-control"
-                                        onChange={(x, data) => validarFormulario(data.value, "correoElectronico")}
+                                        onChange={(x, data) => { 
+                                            onChangeCorreoElectronico(data.value)
+                                            comprobarCampos()}}
                                         required={true}
                                     />
                                 </Grid.Column>
@@ -303,7 +321,9 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
                                         placeholder="+000 0000000000"
                                         type="text"
                                         class="form-control"
-                                        onChange={(x, data) => validarFormulario(data.value, "telefono")}
+                                        onChange={(x, data) =>{ 
+                                            onChangeTelefono(data.value)
+                                            comprobarCampos()}}
                                         required={true}
                                     />
                                 </Grid.Column>
@@ -322,7 +342,10 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
                                                     placeholder="dd/mm/yyyy"
                                                     id="date-picker-inline"
                                                     value={fechaDeNacimiento}
-                                                    onChange={date => setFechaDeNacimiento(date)}
+                                                    onChange={date => {
+                                                        onChangeFechaNacimiento(date)
+                                                        comprobarCampos()
+                                                    }}
                                                     KeyboardButtonProps={{
                                                         'aria-label': 'change date',
                                                     }}
@@ -346,11 +369,13 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
                                         })}
                                         onChange={(e, data) => {
                                             const selected = data.value;
-                                            validarFormulario(data.value, "sede-nodo")
+                                            onChangeNodoSede(data.value)
                                             setSedeNodo({
                                                 SedeId: selected[1],
                                                 NodoId: selected[0],
                                             });
+                                            setValidacionNodo(true)
+                                            comprobarCampos()
                                             setNodo(selected[0])
                                             setSede(selected[1])
                                         }}
@@ -373,7 +398,8 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
                                         onChange={(x, data) => {
                                             console.log(data.value)
                                             setNivelDeIngles(data.value);
-                                            validarFormulario(data.value, "nivelDeIngles")
+                                            onChangeNivelIngles(data.value)
+                                            comprobarCampos()
                                         }}
                                         required={true}
                                     />
@@ -386,8 +412,9 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
                                         type="text"
                                         class="form-control"
                                         onChange={(x, data) => {
-                                            setValidacionNacionalidad(true);
-                                            validarFormulario(data.value, "nacionalidad")
+                                            setValidacionNacionalidad(true)
+                                            onChangeNacionalidad(data.value)
+                                            comprobarCampos()
                                         }}
                                         required={true}
                                     />
@@ -399,7 +426,9 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
                                         value={correoOpcional}
                                         type="text"
                                         class="form-control"
-                                        onChange={(x, data) => validarFormulario(data.value, "correoOpcional")}
+                                        onChange={(x, data) =>{ 
+                                            onChangeCorreoOpcional(data.value)
+                                            comprobarCampos()}}
                                     />
                                 </Grid.Column>
                                 <Grid.Column>
@@ -414,7 +443,9 @@ export default function EditarAlumne({ alumneId, actualizarAlumnes, cursoId }) {
                             type="text"
                             class="form-control"
                             control={TextArea}
-                            onChange={(x, data) => validarFormulario(data.value, "detalle")}
+                            onChange={(x, data) => {
+                                onChangeDetalles(data.value)
+                                comprobarCampos() }}
                         />
                     </Form>
                 </Modal.Content>
