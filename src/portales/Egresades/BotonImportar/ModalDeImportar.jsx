@@ -4,8 +4,6 @@ import { CSVReader } from "react-papaparse";
 import { Message, Button, Modal, Table } from "semantic-ui-react";
 import CargarLista from "./CargarLista";
 import exampleXlsx from "../../../assets/example.csv";
-//import { withAuthenticationRequired } from "@auth0/auth0-react";
-//import VistaNoAutorizado from "../inicio-de-sesion/VistaNoAutorizado";
 import { ObtenerNodosYSedes } from "../../../services/Nodo.js";
 var listaNodos = [];
 var listaSedes = [];
