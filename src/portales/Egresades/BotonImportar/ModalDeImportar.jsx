@@ -321,6 +321,3 @@ class ModalDeImportar extends Component {
 
 export default ModalDeImportar;
 
-/* export default withAuthenticationRequired(ModalDeImportar, {
-  onRedirecting: () => <VistaNoAutorizado />,
-}); */
