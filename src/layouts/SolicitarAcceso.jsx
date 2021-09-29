@@ -76,7 +76,6 @@ export default function SolicitarAcceso({
                         AccesosService.SolicitarAccesoApps({nombre,email,razon:motivo,aplicacion:'Egresades'})
                         .then((response)=>{
                             if(response.status == 201){                                
-                                //resetVariables();
                                 servicioNotificacion.mostrarMensajeExito(
                                     "Solicitud enviada con éxito",
                                     `Su solicitud sera revisada`
