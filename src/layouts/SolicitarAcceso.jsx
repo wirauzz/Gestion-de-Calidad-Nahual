@@ -81,7 +81,6 @@ export default function SolicitarAcceso({
                                     `Su solicitud sera revisada`
                                 );
                             } else {
-                                //resetVariables();
                                 servicioNotificacion.mostrarMensajeError(
                                     "La solicitud no pudo ser procesada",
                                     `Estado de la peticion: ${response.status}`
