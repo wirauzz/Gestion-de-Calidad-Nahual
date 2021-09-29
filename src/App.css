@@ -61,14 +61,6 @@
     width: 50%;  
   }
   
-  .columnGap {
-    column-gap: 1em;
-  }
-  
-  .jTime {
-    width: 100% !important;
-  }
-  
   .forceFlex {
     display: flex !important;
   }
