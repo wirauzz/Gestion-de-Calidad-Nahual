@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-/* import { useAuth0 } from "@auth0/auth0-react";
-import Axios from "axios"; */
 import { Dimmer, Loader } from "semantic-ui-react";
 import NoAutorizado from "./VistaNoAutorizado";
 import { useHistory } from "react-router-dom";
