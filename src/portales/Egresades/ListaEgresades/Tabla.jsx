@@ -81,6 +81,11 @@ class Nahual_Table extends Component {
     this.filtrarEgresades();
   }
 
+  filterItems(arr, currentFilter) {
+    return arr.filter(function(el) {
+      return el.Estado.toLowerCase().indexOf(currentFilter.toLowerCase()) !== -1
+    })
+  }
   
   buscador(nombre){
     let buscado = nombre.target.value;
@@ -91,28 +96,9 @@ class Nahual_Table extends Component {
         filasEncontradas: this.state.api
       });
     }
-  
-    for (let contador = 0; contador < listaEgresades.length; contador++) {      
-      if ((listaEgresades[contador].nombre.toLowerCase() +" "+listaEgresades[contador].apellido.toLowerCase()).includes(buscado.toLowerCase()) ||
-      listaEgresades[contador].nodo.toLowerCase().includes(buscado.toLowerCase()) ||
-      listaEgresades[contador].sede.toLowerCase().includes(buscado.toLowerCase())) {
 
-        switch (this.state.currentFilter) {
-          case 'Egresade':
-              if(listaEgresades[contador].Estado === 'Egresade' || listaEgresades[contador].Estado === 'Egresade/Alumne') {
-                resultados.push(listaEgresades[contador]);
-              }
-            break;
-          case 'Empleade':
-              if(listaEgresades[contador].Estado === 'Empleade') {
-                resultados.push(listaEgresades[contador]);
-              }
-            break;
-          default:
-              resultados.push(listaEgresades[contador]);
-        }
-      }
-    }
+    resultados = this.filterItems(this.filterItems(listaEgresades, buscado), currentFilter)
+    
     this.setState({
       filasEncontradas: resultados,
       valueFilter: nombre.target.value
