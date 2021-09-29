@@ -97,7 +97,7 @@ class Nahual_Table extends Component {
       });
     }
 
-    resultados = this.filterItems(this.filterItems(listaEgresades, buscado), currentFilter)
+    resultados = this.filterItems(this.filterItems(listaEgresades, buscado), this.state.currentFilter)
     
     this.setState({
       filasEncontradas: resultados,
