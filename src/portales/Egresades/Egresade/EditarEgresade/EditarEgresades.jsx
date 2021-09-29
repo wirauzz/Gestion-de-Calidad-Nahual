@@ -172,8 +172,6 @@ export class EditarEgresades extends Component {
       setTimeout(() => {
         this.setState({ isVisibleSuccessMessage: false });
         this.props.history.push("/egresades");
-        //browserHistory.push("/egresades");
-        //return <Redirect to="/egresades" />
       }, 700);
     }
   }
@@ -187,7 +185,6 @@ export class EditarEgresades extends Component {
     let graduateData;
     egresadeAEnviar.nivelInglesId = this.existeNivelIngles(this.state.egresade.nivelIngles)
     egresadeAEnviar = this.obtenerFechaNacimiento(egresadeAEnviar);
-    //egresadeAEnviar.celular = parseInt(egresadeAEnviar.celular);
     egresadeAEnviar.trabajaActualmente = OpcionesDeEstadoLaboral.filter(op => op.value === this.state.egresade.trabajaActualmente)[0].valueToSend;
     egresadeAEnviar.fechaNacimiento = egresadeAEnviar.fechaNacimiento === "" ? null :  egresadeAEnviar.fechaNacimiento;
     delete egresadeAEnviar.nodo;
@@ -463,7 +460,6 @@ export class EditarEgresades extends Component {
                     placeholder={this.state.egresade.trabajaActualmente? "Empleade":"Desempleado"}
                     onChange={this.onChangeDropdown}
                     options={OpcionesDeEstadoLaboral}
-                    //value={this.state.egresade.trabajaActualmente? "Empleade":"Desempleado"}
                     style={{ margin: "0px 15%" }}
                     selection
                   />
@@ -562,6 +558,4 @@ export class EditarEgresades extends Component {
   }
 }
 export default EditarEgresades;
-/* export default withRouter(withAuthenticationRequired(EditarEgresades, {
-  onRedirecting: () => <VistaNoAutorizado />,
-})); */
+

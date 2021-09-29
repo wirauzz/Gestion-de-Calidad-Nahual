@@ -23,7 +23,6 @@ class ListaDeAlumnesPorCurso extends Component {
   }
 
   async componentDidMount() {
-    //this.obtenerAlumnes(1);
   }
 
   obtenerAlumnes(idCurso) {

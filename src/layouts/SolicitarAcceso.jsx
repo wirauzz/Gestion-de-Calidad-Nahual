@@ -15,11 +15,6 @@ export default function SolicitarAcceso({
     const [nombre, setNombre] = useState(user.name);
     const [motivo, setMotivo] = useState('');
 
-/*     const resetVariables = () => {
-        setIsOpenModalEditTopic(false);
-        updateTopicsTable();
-        setNombreTopico('');
-    } */
     return (
         <Modal
             closeIcon
@@ -81,13 +76,11 @@ export default function SolicitarAcceso({
                         AccesosService.SolicitarAccesoApps({nombre,email,razon:motivo,aplicacion:'Egresades'})
                         .then((response)=>{
                             if(response.status == 201){                                
-                                //resetVariables();
                                 servicioNotificacion.mostrarMensajeExito(
                                     "Solicitud enviada con éxito",
                                     `Su solicitud sera revisada`
                                 );
                             } else {
-                                //resetVariables();
                                 servicioNotificacion.mostrarMensajeError(
                                     "La solicitud no pudo ser procesada",
                                     `Estado de la peticion: ${response.status}`
